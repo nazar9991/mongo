@@ -9,7 +9,7 @@ const { MongoClient } = require('mongodb');
 const url = 'https://popwatch-staging.s3.us-east-2.amazonaws.com/movies_1.gz';
 
 // З'єднання з базою даних MongoDB
-const client = new MongoClient('mongodb://localhost:27017/movies_db', { useUnifiedTopology: true });
+const client = new MongoClient('https://realm.mongodb.com/groups/644e5d13de3aee4c9e560f08/apps', { useUnifiedTopology: true });
 
 // Асинхронна функція для завантаження файлу, розпакування та збереження даних в MongoDB
 async function loadMovies() {
